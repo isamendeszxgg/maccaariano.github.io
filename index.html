@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plataforma</title>
+</head>
+
+<body>
+  <header class="header-section">
+    <h1>Restam apenas 100 vagas</h1>
+  </header>
+  <main class="main-section">
+    <section>
+      <div>
+        <h1>
+          Deposite <span class="spanVerde">R$31 Reais</span> e ganhe até <br />
+          <span class="spanVerde"">R$1.000</span> usando o
+            <span class=" spanAmarelo">link exclusivo <br />
+            dos artistas!</span>
+        </h1>
+        <p>
+          A única forma de
+          <span class="spanVerde"">ganhar sempre nos jogos</span> de cassino é
+            usando o <br /><span class=" spanAmarelo"> link que o dono </span> da
+          casa libera para cada artista e influenciador <br />
+          jogar
+        </p>
+      </div>
+      <div>
+        <button><a href="https://blaze.cxclick.com/visit/?bta=39393&brand=blaze">Garantir vaga
+            agora!</a></button>
+      </div>
+    </section>
+
+    <section class="second-section">
+      <div>
+        <p>
+          <span class="spanVerde">Cadastre-se na JonBet</span> utilizando o link exclusivo dos artistas e <br>
+          comece a ganhar ainda hoje.
+        </p>
+      </div>
+      <div class="videos">
+        <video id="MeuVideo" width="200" height="450" controls controlsList="nodownload">
+          <source src="ryan.mp4" type="video/mp4">
+          Seu browser não suporta a tag video.
+        </video>
+        <video id="MeuVideo" width="200" height="450" controls controlsList="nodownload">
+          <source src="ryan2.mp4" type="video/mp4">
+          Seu browser não suporta a tag video.
+        </video>
+        <video id="MeuVideo" width="200" height="450" controls controlsList="nodownload">
+          <source src="oruan.mp4" type="video/mp4">
+          Seu browser não suporta a tag video.
+        </video>
+        <video id="MeuVideo" width="200" height="450" controls controlsList="nodownload">
+          <source src="oruan3.mp4" type="video/mp4">
+          Seu browser não suporta a tag video.
+        </video>
+        <video id="MeuVideo" width="200" height="450" controls controlsList="nodownload">
+          <source src="maumau.mp4" type="video/mp4">
+          Seu browser não suporta a tag video.
+        </video>
+      </div>
+
+      <div>
+        <button><a href="https://blaze.cxclick.com/visit/?bta=39393&brand=blaze">Garantir vaga
+            agora!</a></button>
+      </div>
+
+      <div class="notification-bar" id="notificationBar">
+        <span></span>
+      </div>
+    </section>
+
+    <footer>
+      AVISO IMPORTANTE: As dicas de horários oferecidas neste site são baseadas em nossa análise e experiência.
+      Embora possam ajudá-lo a aumentar suas chances de sucesso, é importante lembrar que os jogos de azar envolvem
+      riscos e nunca há garantias de vitória.
+      Lembre-se sempre de jogar com responsabilidade, definir limites para suas apostas e nunca excedê-los.
+      O jogo é destinado a ser uma forma de entretenimento e nunca deve ser visto como uma fonte de renda confiável.
+    </footer>
+  </main>
+  <script>
+
+    let notificationBar = document.getElementById("notificationBar");
+    let notifications = [
+        "Fernanda D. cadastrou e acabou de ganhar R$55",
+        "Marcos Antonio cadastrou e acabou de ganhar R$403",
+        "Vitor Augusto cadastrou e acabou de ganhar R$43",
+        "Fernanda D. cadastrou e acabou de ganhar R$55",
+        "Gabriel Oliveira cadastrou e acabou de ganhar R$597",
+        "Marcos Antonio cadastrou e acabou de ganhar R$403",
+        "Eduardo Silva cadastrou e acabou de ganhar R$403",
+        "Renata Souza cadastrou e acabou de ganhar R$112",
+        "Juliana Santos cadastrou e acabou de ganhar R$230",
+        "Rafael Lima cadastrou e acabou de ganhar R$175"
+    ];
+    let currentIndex = 0;
+
+    function showNotification() {
+        notificationBar.textContent = notifications[currentIndex];
+        notificationBar.classList.remove("hidden");
+        notificationBar.classList.add("slide-in");
+
+        setTimeout(function() {
+            notificationBar.classList.remove("slide-in");
+            notificationBar.classList.add("slide-out");
+
+            setTimeout(function() {
+                notificationBar.classList.remove("slide-out");
+                notificationBar.classList.add("hidden");
+                currentIndex = (currentIndex + 1) % notifications.length;
+                showNotification(); // Chama recursivamente para exibir a próxima notificação
+            }, 5000); // Tempo de espera antes de iniciar a próxima notificação
+        }, 3000); // Tempo de exibição da notificação atual
+    }
+
+    showNotification(); // Inicia o ciclo de exibição das notificações
+
+  </script>
+</body>
+
+</html>
+
+<style>
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    /* Define a cor padrão do texto */
+    font-family: Arial, sans-serif;
+    /* Define uma fonte padrão */
+  }
+
+  .header-section {
+    text-align: center;
+    background-color: red;
+    padding: 10px 0;
+    /* Adiciona padding para melhor apresentação */
+  }
+
+  .header-section h1 {
+    margin: 0;
+    /* Remove margens do <h1> */
+    font-size: 24px;
+    /* Define o tamanho da fonte do primeiro <h1> */
+  }
+
+  .main-section {
+    text-align: center;
+    /* Centraliza o conteúdo na horizontal */
+    padding: 50px 20px;
+    /* Adiciona espaçamento interno */
+  }
+
+  .main-section h1 {
+    font-size: 70px;
+    /* Define o tamanho da fonte do segundo <h1> */
+    margin-bottom: 20px;
+    /* Espaçamento abaixo do <h1> */
+  }
+
+  .main-section p {
+    font-size: 37px;
+    /* Define o tamanho da fonte do <h2> */
+  }
+
+  .spanVerde {
+    color: rgb(81, 255, 0);
+  }
+
+  .spanAmarelo {
+    color: yellow;
+  }
+
+  button {
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: rgb(10, 179, 52);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    /* Adiciona transição suave */
+    border-radius: 20px;
+    /* Arredonda todos os cantos do botão */
+  }
+
+  button:hover {
+    transform: scale(1.05);
+    /* Efeito de zoom ao passar o mouse */
+  }
+
+  .second-section p {
+    font-size: 40px;
+  }
+
+  .videos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+
+  video {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .notification-bar {
+    position: fixed;
+    bottom: 20px; /* Distância do rodapé */
+    left: -100%; /* Começa fora da tela à esquerda */
+    width: 250px;
+    background-color: #0bee97; /* Cor de fundo vermelha */
+    color: white; /* Cor do texto branca */
+    text-align: center;
+    padding: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Mantém a barra no topo */
+    border-radius: 5px 5px 5px 5px; /* Cantos arredondados (esquerda) */
+    opacity: 1;
+}
+
+.notification-bar.slide-in {
+    animation: slideIn 0.5s forwards; /* Animação de entrada */
+}
+
+.notification-bar.slide-out {
+    animation: slideOut 0.5s forwards; /* Animação de saída */
+}
+
+@keyframes slideIn {
+    0% {
+        left: -100%; /* Início fora da tela à esquerda */
+    }
+    100% {
+        left: 20px; /* Final na posição desejada */
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        left: 20px; /* Início na posição atual */
+    }
+    100% {
+        left: -100%; /* Final fora da tela à esquerda */
+    }
+}
+  footer {
+    text-align: center;
+    font-size: 14px;
+    color: #e0e0e0;
+    padding: 20px;
+    margin-top: 30px;
+  }
+
+  footer span {
+    font-weight: bold;
+    color: #51ff00;
+  }
+</style>
